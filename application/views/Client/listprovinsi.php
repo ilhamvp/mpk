@@ -1,0 +1,63 @@
+<div id="main-content">
+        <div class="container-fluid">
+            <div class="block-header">
+                <div class="row">
+                    <div class="col-lg-5 col-md-8 col-sm-12">                        
+                        <h2><?= $judul ?></h2>
+                    </div>            
+                    <div class="col-lg-7 col-md-4 col-sm-12 text-right">
+                        <ul class="breadcrumb justify-content-end">
+                            <li class="breadcrumb-item"><a href="index.html"><i class="icon-home"></i></a></li>
+                            <li class="breadcrumb-item">Table</li>
+                            <li class="breadcrumb-item active"><?= $breadcrumb ?></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row clearfix">
+                <div class="col-lg-12">
+                    <div class="card">
+                        <div class="header">
+                            <h2> <?= $namatabel ?> </h2>                            
+                        </div>
+                        <div class="body">
+                            <div class="table-responsive">
+                                <table class="table table-bordered table-hover js-basic-example dataTable table-custom">
+                                    <thead>
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Provinsi</th>
+                                            <th>Action</th>
+                                            
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                      <?php foreach($provinsi as $listprovinsi) : ?>
+                                        <tr>
+                                            <td><?= $listprovinsi['id_provinsi'] ?></td>
+                                            <td><?= $listprovinsi['nama_provinsi'] ?></td>
+                                            <td>
+                                                <button type="button" class="btn btn-primary" title="Edit"><span class="sr-only">Edit</span> Edit <i class="fa fa-edit (alias)"></i></button>
+                                                <button type="button" class="btn btn-danger" title="Delete"><span class="sr-only">Delete</span> Delete <i class="fa fa-trash-o"></i></button>
+                                                
+                                            </td>
+                                        </tr>
+                                        <?php endforeach;?>
+                                       
+                                    </tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Provinsi</th>
+                                            <th>Action</th>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+            <!-- </div>//test -->
+                
+        </div>
+    </div>
